@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_rotas/navegacao_comum/await_params/await_params_home_page.dart';
 import 'package:get_rotas/navegacao_comum/back/back_home_page.dart';
 import 'package:get_rotas/navegacao_comum/core_widget_custom/elevated_button_custom.dart';
 import 'package:get_rotas/navegacao_comum/off/off_home_page.dart';
@@ -116,6 +117,12 @@ class NavegacaoComumHomePage extends StatelessWidget {
                 Get.to(const SendParamsHomePage());
               },
               text: 'Enviando Parâmetros',
+            ),
+            ElevatedButtonCustom(
+              onPressed: () {
+                Get.to(const AwaitParamsHomePage());
+              },
+              text: 'Aguardando Retorno',
             ),
           ],
         ),
