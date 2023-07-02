@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_rotas/navegacao_comum/to/to_navegacao_page.dart';
+import 'package:get_rotas/navegacao_comum/off/off_navegacao_page3.dart';
 
-class ToHomePage extends StatelessWidget {
-  const ToHomePage({super.key});
+class OffNavegacaoPage2 extends StatelessWidget {
+  const OffNavegacaoPage2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('To Home Page'),
+        title: const Text('Page de Navegação 2'),
       ),
       body: Center(
         child: Column(
@@ -17,21 +17,21 @@ class ToHomePage extends StatelessWidget {
           children: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).push(
+                Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
                     builder: (context) {
-                      return const ToNavegacaoPage();
+                      return const OffNavegacaoPage3();
                     },
                   ),
                 );
               },
-              child: const Text('Got to Page com Flutter Nativo'),
+              child: const Text('Got to Page 3 com Flutter Nativo'),
             ),
             TextButton(
               onPressed: () {
-                Get.to(const ToNavegacaoPage());
+                Get.off(const OffNavegacaoPage3());
               },
-              child: const Text('Got to Page com GetX'),
+              child: const Text('Got to Page 3 com GetX'),
             ),
           ],
         ),

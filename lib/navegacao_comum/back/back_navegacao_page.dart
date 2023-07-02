@@ -8,7 +8,7 @@ class BackNavegacaoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(''),
+        title: const Text('Page de Navegação'),
       ),
       body: Center(
         child: Column(
