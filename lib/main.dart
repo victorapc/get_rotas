@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_rotas/navegacao_comum/navegacao_comum_home_page.dart';
-import 'package:get_rotas/navegacao_comum/pages/nomeada_pagina1.dart';
+import 'package:get_rotas/navegacao_comum/pages/inicial/nomeada_pagina1.dart';
+import 'package:get_rotas/navegacao_comum/pages/rota_nao_encontrada/rota_nao_encontrada_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,9 +22,14 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
+      unknownRoute: GetPage(
+        name: '/404',
+        page: () => const RotaNaoEncontradaPage(),
+      ),
+      initialRoute: '/home',
       getPages: [
         GetPage(
-          name: '/',
+          name: '/home',
           page: () => const NavegacaoComumHomePage(),
         ),
         GetPage(

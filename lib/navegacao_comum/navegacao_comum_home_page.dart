@@ -147,6 +147,12 @@ class NavegacaoComumHomePage extends StatelessWidget {
                   },
                   text: 'Pagina Nomeada',
                 ),
+                ElevatedButtonCustom(
+                  onPressed: () {
+                    Get.toNamed('/paginaquenaoexiste');
+                  },
+                  text: 'Pagina Não Existe',
+                ),
               ],
             ),
           ),
