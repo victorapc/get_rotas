@@ -31,6 +31,11 @@ class MyApp extends StatelessWidget {
         page: () => const RotaNaoEncontradaPage(),
       ),
       initialRoute: '/home',
+      routingCallback: (Routing? routing) {
+        // Forma de ficar observando as rotas.
+        debugPrint('Previous: ${routing?.previous}');
+        debugPrint('Current: ${routing?.current}');
+      },
       getPages: [
         GetPage(
           name: '/home',
