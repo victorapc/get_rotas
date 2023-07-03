@@ -159,6 +159,12 @@ class NavegacaoComumHomePage extends StatelessWidget {
                   },
                   text: 'Envio de Parâmetros Nomeados.',
                 ),
+                ElevatedButtonCustom(
+                  onPressed: () {
+                    Get.toNamed('/middlewares');
+                  },
+                  text: 'Middlewares',
+                ),
               ],
             ),
           ),

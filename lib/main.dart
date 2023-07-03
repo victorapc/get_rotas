@@ -6,6 +6,9 @@ import 'package:get_rotas/navegacao_comum/pages_nomeadas/envio_parametros/envio_
 import 'package:get_rotas/navegacao_comum/pages_nomeadas/envio_parametros/path_param_page.dart';
 import 'package:get_rotas/navegacao_comum/pages_nomeadas/envio_parametros/query_param_page.dart';
 import 'package:get_rotas/navegacao_comum/pages_nomeadas/inicial/nomeada_pagina1.dart';
+import 'package:get_rotas/navegacao_comum/pages_nomeadas/middlewares/acesso_negado_page.dart';
+import 'package:get_rotas/navegacao_comum/pages_nomeadas/middlewares/middlewares_home_page.dart';
+import 'package:get_rotas/navegacao_comum/pages_nomeadas/middlewares/route_middlewares.dart';
 import 'package:get_rotas/navegacao_comum/pages_nomeadas/rota_nao_encontrada/rota_nao_encontrada_page.dart';
 
 void main() {
@@ -44,6 +47,9 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/inicial/pagina1',
           page: () => const NomeadaPagina1(),
+          middlewares: [
+            RouteMiddlewares(),
+          ],
         ),
         GetPage(
           name: '/envioparametronomeada',
@@ -62,6 +68,17 @@ class MyApp extends StatelessWidget {
               page: () => const QueryParamPage(),
             ),
           ],
+        ),
+        GetPage(
+          name: '/middlewares',
+          page: () => MiddlewaresHomePage(),
+          middlewares: [
+            RouteMiddlewares(),
+          ],
+        ),
+        GetPage(
+          name: '/acessonegado',
+          page: () => const AcessoNegadoPage(),
         ),
       ],
     );
