@@ -153,6 +153,12 @@ class NavegacaoComumHomePage extends StatelessWidget {
                   },
                   text: 'Pagina Não Existe',
                 ),
+                ElevatedButtonCustom(
+                  onPressed: () {
+                    Get.toNamed('/envioparametronomeada');
+                  },
+                  text: 'Envio de Parâmetros Nomeados.',
+                ),
               ],
             ),
           ),
