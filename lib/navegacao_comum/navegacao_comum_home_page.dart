@@ -165,6 +165,12 @@ class NavegacaoComumHomePage extends StatelessWidget {
                   },
                   text: 'Middlewares',
                 ),
+                ElevatedButtonCustom(
+                  onPressed: () {
+                    Get.toNamed('/nestednavigation');
+                  },
+                  text: 'Nested Navigation',
+                ),
               ],
             ),
           ),

@@ -9,6 +9,7 @@ import 'package:get_rotas/navegacao_comum/pages_nomeadas/inicial/nomeada_pagina1
 import 'package:get_rotas/navegacao_comum/pages_nomeadas/middlewares/acesso_negado_page.dart';
 import 'package:get_rotas/navegacao_comum/pages_nomeadas/middlewares/middlewares_home_page.dart';
 import 'package:get_rotas/navegacao_comum/pages_nomeadas/middlewares/route_middlewares.dart';
+import 'package:get_rotas/navegacao_comum/pages_nomeadas/nested_navigation/home_nested_navigation.dart';
 import 'package:get_rotas/navegacao_comum/pages_nomeadas/rota_nao_encontrada/rota_nao_encontrada_page.dart';
 
 void main() {
@@ -79,6 +80,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/acessonegado',
           page: () => const AcessoNegadoPage(),
+        ),
+        GetPage(
+          name: '/nestednavigation',
+          page: () => HomeNestedNavigation(),
         ),
       ],
     );
